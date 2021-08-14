@@ -1,0 +1,13 @@
+https://github.com/dappuniversity/eth-todo-list/blob/master/truffle-config.js
+sudo truffle migrate
+sudo truffle console
+todoList = await TodoList.deployed()
+
+todoList
+todoList.address
+
+tc = await todoList.taskCount()
+tc.toNumber();
+
+
+sudo truffle migrate --reset
