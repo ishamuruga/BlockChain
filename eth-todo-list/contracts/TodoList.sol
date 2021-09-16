@@ -25,6 +25,6 @@ contract TodoList {
         taskCount++;
         tasks[taskCount] = Task(taskCount,_content,false);
 
-        //emit TaskCreated(taskCount, _content, false);
+        emit TaskCreated(taskCount, _content, false);
     }
 }

@@ -1,4 +1,9 @@
+npm install truffle@5.0.2 --global
+truffle version
+
 https://github.com/dappuniversity/eth-todo-list/blob/master/truffle-config.js
+https://www.dappuniversity.com/articles/blockchain-app-tutorial
+sudo truffle compile
 sudo truffle migrate
 sudo truffle console
 todoList = await TodoList.deployed()
