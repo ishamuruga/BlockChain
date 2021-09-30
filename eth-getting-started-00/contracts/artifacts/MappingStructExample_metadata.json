@@ -6,12 +6,23 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
 				"name": "balanceReceived",
 				"outputs": [
 					{
 						"internalType": "uint256",
-						"name": "",
+						"name": "totalBalance",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "numPayments",
 						"type": "uint256"
 					}
 				],
@@ -39,8 +50,14 @@
 				"type": "function"
 			},
 			{
-				"inputs": [],
-				"name": "withdrawMoney",
+				"inputs": [
+					{
+						"internalType": "address payable",
+						"name": "_to",
+						"type": "address"
+					}
+				],
+				"name": "withDrawAllMoney",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -51,9 +68,14 @@
 						"internalType": "address payable",
 						"name": "_to",
 						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
 					}
 				],
-				"name": "withdrawMoneyTo",
+				"name": "withDrawAmount",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -72,7 +94,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/StartStopUpdateExample.sol": "SendMoneyExample"
+			"contracts/MappingStructExample.sol": "MappingStructExample"
 		},
 		"evmVersion": "london",
 		"libraries": {},
@@ -86,12 +108,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/StartStopUpdateExample.sol": {
-			"keccak256": "0x46c92e3770e2a7bce825c929d1418ac9ec1b96c68ebc2634e3c17bbde9fd1c66",
+		"contracts/MappingStructExample.sol": {
+			"keccak256": "0x1199659827f5a7119185a3e23aa897af347a92188f292553c7476425ea0fd882",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://af2f928826e0b22e990f46153806150c318c77fe849348b1a38e945d4dd5532b",
-				"dweb:/ipfs/QmZNu1uUAgo5JrpSgfuiUzfec3J9oGRudx6k8odmYFNqh6"
+				"bzz-raw://d688ec44d76f7b34450ed85506a539062fbbdc260995daa97251fb3287335925",
+				"dweb:/ipfs/QmZW4dGVJbXDJWyyphcM67dF4PeWh6FQXZSKtnnYh9TwKw"
 			]
 		}
 	},

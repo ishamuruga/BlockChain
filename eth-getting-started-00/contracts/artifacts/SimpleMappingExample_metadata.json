@@ -6,54 +6,59 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
-				"name": "balanceReceived",
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "myAddressMapping",
 				"outputs": [
 					{
-						"internalType": "uint256",
+						"internalType": "bool",
 						"name": "",
-						"type": "uint256"
+						"type": "bool"
 					}
 				],
 				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "getBalance",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "receiveMoney",
-				"outputs": [],
-				"stateMutability": "payable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "withdrawMoney",
-				"outputs": [],
-				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
 				"inputs": [
 					{
-						"internalType": "address payable",
-						"name": "_to",
-						"type": "address"
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
 					}
 				],
-				"name": "withdrawMoneyTo",
+				"name": "myMapping",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_index",
+						"type": "uint256"
+					}
+				],
+				"name": "setMapping",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "setMyAddressToTrue",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -72,7 +77,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/StartStopUpdateExample.sol": "SendMoneyExample"
+			"contracts/SimpleMappingExample.sol": "SimpleMappingExample"
 		},
 		"evmVersion": "london",
 		"libraries": {},
@@ -86,12 +91,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/StartStopUpdateExample.sol": {
-			"keccak256": "0x46c92e3770e2a7bce825c929d1418ac9ec1b96c68ebc2634e3c17bbde9fd1c66",
+		"contracts/SimpleMappingExample.sol": {
+			"keccak256": "0x160bbdd4d493608f3c15b9dfa98b7c6e574ed2c84972e3a2e371ccac08304d10",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://af2f928826e0b22e990f46153806150c318c77fe849348b1a38e945d4dd5532b",
-				"dweb:/ipfs/QmZNu1uUAgo5JrpSgfuiUzfec3J9oGRudx6k8odmYFNqh6"
+				"bzz-raw://155051e8af73a1654a54be0177cfbe3e319e0c77171e371471a486b7ef78bfee",
+				"dweb:/ipfs/QmPtSdqBbrbvXxHSFjXo99n19Ptj73Fy3Hk4uWAJEp1U4z"
 			]
 		}
 	},

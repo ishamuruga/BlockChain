@@ -7,16 +7,8 @@
 		"abi": [
 			{
 				"inputs": [],
-				"name": "myString",
-				"outputs": [
-					{
-						"internalType": "string",
-						"name": "",
-						"type": "string"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
+				"stateMutability": "nonpayable",
+				"type": "constructor"
 			}
 		],
 		"devdoc": {
@@ -32,7 +24,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/MyContract.sol": "MyContract"
+			"contracts/Owned.sol": "Owned"
 		},
 		"evmVersion": "london",
 		"libraries": {},
@@ -46,12 +38,11 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/MyContract.sol": {
-			"keccak256": "0xe181a261b029d6dac716069672f81116e3bc988359309baf1375466512a45cfb",
-			"license": "MIT",
+		"contracts/Owned.sol": {
+			"keccak256": "0x226cde63978d7cf068bb873f637d199b44578e0d892852512b5595b104980c0e",
 			"urls": [
-				"bzz-raw://08bea75540b9090eafce4eb349e54a409afcb7cf27ee33543f09707a885188c8",
-				"dweb:/ipfs/QmU2Gp4Fga582MdK23p5kGxcEHQmUKxXKSyo4kJyA7fWqk"
+				"bzz-raw://64e7035d94a99abbacc5032648ac95f93d59708bb9bca356e49da3a94df85f51",
+				"dweb:/ipfs/QmRxorwTRyE8oRanaxPjkh9F9ZjuPhAZezxgxYbdQnk74C"
 			]
 		}
 	},

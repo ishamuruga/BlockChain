@@ -7,15 +7,20 @@
 		"abi": [
 			{
 				"inputs": [],
-				"name": "balanceReceived",
-				"outputs": [
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
 					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
+						"internalType": "address payable",
+						"name": "_to",
+						"type": "address"
 					}
 				],
-				"stateMutability": "view",
+				"name": "destroySmartContract",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -33,14 +38,33 @@
 			},
 			{
 				"inputs": [],
+				"name": "paused",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "receiveMoney",
 				"outputs": [],
 				"stateMutability": "payable",
 				"type": "function"
 			},
 			{
-				"inputs": [],
-				"name": "withdrawMoney",
+				"inputs": [
+					{
+						"internalType": "bool",
+						"name": "_paused",
+						"type": "bool"
+					}
+				],
+				"name": "setPaused",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -53,7 +77,7 @@
 						"type": "address"
 					}
 				],
-				"name": "withdrawMoneyTo",
+				"name": "withdrawMoneyAllMoney",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -72,7 +96,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/StartStopUpdateExample.sol": "SendMoneyExample"
+			"contracts/StartStopUpdateExample.sol": "StartStopUpdateExample"
 		},
 		"evmVersion": "london",
 		"libraries": {},
@@ -87,11 +111,11 @@
 	},
 	"sources": {
 		"contracts/StartStopUpdateExample.sol": {
-			"keccak256": "0x46c92e3770e2a7bce825c929d1418ac9ec1b96c68ebc2634e3c17bbde9fd1c66",
+			"keccak256": "0xdda8f05b6c697630d501d656b937243a725b03143c70d06c29ee0d43c2ae55ff",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://af2f928826e0b22e990f46153806150c318c77fe849348b1a38e945d4dd5532b",
-				"dweb:/ipfs/QmZNu1uUAgo5JrpSgfuiUzfec3J9oGRudx6k8odmYFNqh6"
+				"bzz-raw://c7bc639921cd473247fbcdd946f1b6046fc4f635211d2bc7e317cca4c58027c3",
+				"dweb:/ipfs/QmV7XCeYJRFe7eU5qqeu4GComaQbyssbHhtQipaA24yats"
 			]
 		}
 	},

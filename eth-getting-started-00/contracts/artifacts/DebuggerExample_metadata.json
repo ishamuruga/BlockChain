@@ -6,13 +6,26 @@
 	"output": {
 		"abi": [
 			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_val",
+						"type": "uint256"
+					}
+				],
+				"name": "setTokens",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"inputs": [],
-				"name": "myString",
+				"name": "tokens",
 				"outputs": [
 					{
-						"internalType": "string",
+						"internalType": "uint256",
 						"name": "",
-						"type": "string"
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -32,7 +45,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/MyContract.sol": "MyContract"
+			"contracts/DebuggerExample.sol": "DebuggerExample"
 		},
 		"evmVersion": "london",
 		"libraries": {},
@@ -46,12 +59,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/MyContract.sol": {
-			"keccak256": "0xe181a261b029d6dac716069672f81116e3bc988359309baf1375466512a45cfb",
+		"contracts/DebuggerExample.sol": {
+			"keccak256": "0x31872ea207896b86e1fa2489ee3df92603410094540851d70d46b5c55d13007c",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://08bea75540b9090eafce4eb349e54a409afcb7cf27ee33543f09707a885188c8",
-				"dweb:/ipfs/QmU2Gp4Fga582MdK23p5kGxcEHQmUKxXKSyo4kJyA7fWqk"
+				"bzz-raw://98b1a1e202c00a347e6b6c327dd1d81ba71a8b86c9d955c4d8a2d2022a919120",
+				"dweb:/ipfs/QmQ8ZXfddxNWdrpCC7WFPLhf1btBwkvw7Aa1tExBefCr2m"
 			]
 		}
 	},

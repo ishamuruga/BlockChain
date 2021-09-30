@@ -6,26 +6,19 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
 				"name": "balanceReceived",
 				"outputs": [
 					{
-						"internalType": "uint256",
+						"internalType": "uint64",
 						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "getBalance",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
+						"type": "uint64"
 					}
 				],
 				"stateMutability": "view",
@@ -39,21 +32,19 @@
 				"type": "function"
 			},
 			{
-				"inputs": [],
-				"name": "withdrawMoney",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
 				"inputs": [
 					{
 						"internalType": "address payable",
 						"name": "_to",
 						"type": "address"
+					},
+					{
+						"internalType": "uint64",
+						"name": "_amount",
+						"type": "uint64"
 					}
 				],
-				"name": "withdrawMoneyTo",
+				"name": "withDrawMoney",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -72,7 +63,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/StartStopUpdateExample.sol": "SendMoneyExample"
+			"contracts/ExceptionExample.sol": "ExceptionExample"
 		},
 		"evmVersion": "london",
 		"libraries": {},
@@ -86,12 +77,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/StartStopUpdateExample.sol": {
-			"keccak256": "0x46c92e3770e2a7bce825c929d1418ac9ec1b96c68ebc2634e3c17bbde9fd1c66",
+		"contracts/ExceptionExample.sol": {
+			"keccak256": "0x480e39d7ace84b9f504de697d3601238dbe9c3a83d99ba627db2ca49c0393d2e",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://af2f928826e0b22e990f46153806150c318c77fe849348b1a38e945d4dd5532b",
-				"dweb:/ipfs/QmZNu1uUAgo5JrpSgfuiUzfec3J9oGRudx6k8odmYFNqh6"
+				"bzz-raw://4a02fd3175c22f5a4a7fd4953c614098d3fc709c5ecf10069b76f4203071444d",
+				"dweb:/ipfs/QmQ9H4HdzEwhtNQR2H2toJUXzBNkLzg6VwQ7o4S2NFyfVd"
 			]
 		}
 	},
