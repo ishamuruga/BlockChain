@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/SharedWallet.sol": "sharedWallet"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/SharedWallet.sol": {
+			"keccak256": "0xf00d93a173bb08d5900fbb5166c79337c3c2e94cd7143f3bb6a58afc6b70ebb8",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d393a6b6ed544558d691bf1e60b0c6dcc457d90eed6da5732305909b1e79f681",
+				"dweb:/ipfs/QmNmy7NvbQJ7chNbftyiVA2FiiRJUMpF75rYRUSDYjKdJt"
+			]
+		}
+	},
+	"version": 1
+}

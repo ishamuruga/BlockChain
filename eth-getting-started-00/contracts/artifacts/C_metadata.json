@@ -1,0 +1,66 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "_mystring",
+						"type": "string"
+					}
+				],
+				"name": "MyEvent",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "funcA",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/MyOverrideExample.sol": "C"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/MyOverrideExample.sol": {
+			"keccak256": "0x699e7a0014c8d83012394d0416a2034098a28b1f4216ac53ae547f7847694f53",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://e9d6f00525c4c7c4a6c7d6c7c4cbb124af37580496679d63fc62152e0cd6b4e1",
+				"dweb:/ipfs/QmUZv2mGEfyvy4oiqwbwdacraLmXH5d22ChZfmx2ZcpcC9"
+			]
+		}
+	},
+	"version": 1
+}

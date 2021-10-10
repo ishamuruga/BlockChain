@@ -1,0 +1,67 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "funARequireFailure",
+				"outputs": [],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "funBRevertFailure",
+				"outputs": [],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "funCAssertFailure",
+				"outputs": [],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/TryCatchExample.sol": "ContractA"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/TryCatchExample.sol": {
+			"keccak256": "0xf14c334052691cc5de8a55ef4c1ae9ecf97c20c896317a508ec032014ba99f95",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://4a0cef77f7463b06e233214cc77fbc58abc7a4c43e5638490d3cf7901dd25577",
+				"dweb:/ipfs/QmTfwjd3tKbD5j3GxSsHxmzuCb64pRnoF8HdyrEaHzUXqG"
+			]
+		}
+	},
+	"version": 1
+}

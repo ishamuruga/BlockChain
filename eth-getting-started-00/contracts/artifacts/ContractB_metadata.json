@@ -1,0 +1,90 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "_reason",
+						"type": "string"
+					}
+				],
+				"name": "Error",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "bytes",
+						"name": "_reason",
+						"type": "bytes"
+					}
+				],
+				"name": "LowLevelError",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "testRequireTryCatch",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/TryCatchExample.sol": "ContractB"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/TryCatchExample.sol": {
+			"keccak256": "0xf14c334052691cc5de8a55ef4c1ae9ecf97c20c896317a508ec032014ba99f95",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://4a0cef77f7463b06e233214cc77fbc58abc7a4c43e5638490d3cf7901dd25577",
+				"dweb:/ipfs/QmTfwjd3tKbD5j3GxSsHxmzuCb64pRnoF8HdyrEaHzUXqG"
+			]
+		}
+	},
+	"version": 1
+}

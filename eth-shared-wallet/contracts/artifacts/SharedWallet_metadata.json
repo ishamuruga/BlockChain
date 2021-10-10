@@ -1,0 +1,108 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "_message",
+						"type": "string"
+					}
+				],
+				"name": "Logger",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "_message",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "_value",
+						"type": "uint256"
+					}
+				],
+				"name": "MethodCalled",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address payable",
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					}
+				],
+				"name": "withDrawMoney",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/SharedWallet.sol": "SharedWallet"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/BaseContract.sol": {
+			"keccak256": "0xe44ba1057059f6d73e3ecf38f36d973a668f845ce566eaa8aad3d28748b24a0b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a37c4f2d29fbbace212fb8e251af30abad8631f5a24de2f4828e4eeb17074f25",
+				"dweb:/ipfs/QmWpdGpQ51TcED3CDAUE4mgso4NJo2UCYQnfdCfB9jCWpi"
+			]
+		},
+		"contracts/SharedWallet.sol": {
+			"keccak256": "0xcbb4a1624f0659c1a9f682779de62f7915c237f5437c9053f44266da2cead3c8",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://1b177829360cf31dad4c634960739ba6fcd12f553a8061bccc6b228da56e3e10",
+				"dweb:/ipfs/QmZsGCEtHYF6TmpE7qTVoHspynjjz4Y7XE737W2pvLq2rF"
+			]
+		}
+	},
+	"version": 1
+}
