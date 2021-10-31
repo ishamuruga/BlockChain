@@ -1,0 +1,162 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "_itemIndex",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "_step",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "_itemAddress",
+						"type": "address"
+					}
+				],
+				"name": "SupplyChainStep",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_identifier",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_itemPrice",
+						"type": "uint256"
+					}
+				],
+				"name": "createItem",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "isOwner",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "items",
+				"outputs": [
+					{
+						"internalType": "contract Item007",
+						"name": "_item",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "_identifier",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_itemPrice",
+						"type": "uint256"
+					},
+					{
+						"internalType": "enum ItemManager007.SupplyChainState",
+						"name": "_state",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_itemIndex",
+						"type": "uint256"
+					}
+				],
+				"name": "triggerDelivery",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_itemIndex",
+						"type": "uint256"
+					}
+				],
+				"name": "triggerPayment",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/ItemManager007.sol": "ItemManager007"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/ItemManager007.sol": {
+			"keccak256": "0xa64fb5469e4802971da96f52d8c78e270538c76b0e612c6cb81e5044ceb14ddc",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://9442038d888cbf6fb40210b432e5feac65fe6799d3b39f6a15fa3487325622b4",
+				"dweb:/ipfs/QmQxnbQp9Yhf6QgsCdC6uUXsBPEX33AG9NqiVaXrU6QaB7"
+			]
+		}
+	},
+	"version": 1
+}

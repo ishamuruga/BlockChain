@@ -21,5 +21,7 @@ let contract = new web3.eth.Contract(ABI,ADDR);
 contract.methods.myUnit().call().then(console.log);
 contract.methods.setUint(56).send({from:"0x3EE395b7F0D0d8d48B69003d15ADC1484F0D97ef"}).then(console.log);
 
+contract.methods.createItem("mobEx",100).send({from:"0x866Ce66CD52a44fF29589b3372a9F1b42E12F872"}).then(console.log)
 
-web3.eth.getAccounts().then(console.log);
+
+web3.eth.getAccounts().then(console.log);   

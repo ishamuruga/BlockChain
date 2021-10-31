@@ -7,12 +7,17 @@
 		"abi": [
 			{
 				"inputs": [],
-				"name": "index",
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "_owner",
 				"outputs": [
 					{
-						"internalType": "uint256",
+						"internalType": "address",
 						"name": "",
-						"type": "uint256"
+						"type": "address"
 					}
 				],
 				"stateMutability": "view",
@@ -20,25 +25,12 @@
 			},
 			{
 				"inputs": [],
-				"name": "paidWei",
+				"name": "isOwner",
 				"outputs": [
 					{
-						"internalType": "uint256",
+						"internalType": "bool",
 						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "priceInWei",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
+						"type": "bool"
 					}
 				],
 				"stateMutability": "view",
@@ -58,7 +50,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/Item.sol": "Item"
+			"contracts/Ownable.sol": "Ownable"
 		},
 		"evmVersion": "london",
 		"libraries": {},
@@ -72,12 +64,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/Item.sol": {
-			"keccak256": "0x400807c32c26d87db9bdad400af7066cb259df7cde96263ecf50f87f0e4ed676",
+		"contracts/Ownable.sol": {
+			"keccak256": "0xc116c50750f39e696d8989590c1124e598a24e451831ad3ac9fc0bd1ee4f4591",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://b25d95886a489b344ab108ca68c8ffd27251604efcef9ada99683b600c5b32d4",
-				"dweb:/ipfs/QmaE8p98GAUGBZDucLbYXwAoT45pU3DM1FtHaD3APwFxvC"
+				"bzz-raw://cdd4ca46052b7afd66ef181b718142e2b2fb52cdca2542b01c26da4af197fd82",
+				"dweb:/ipfs/QmVWooFz9crXvY6a4Ae9TyDk5MyAxpHSijPTDWZ4qcwYrH"
 			]
 		}
 	},

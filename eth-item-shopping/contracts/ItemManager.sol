@@ -8,7 +8,7 @@ contract ItemManager {
     struct S_Item {
         Item _item;
         SupplyChainSteps _step;
-        string _identifier;
+        string _identifier;   
         //uint _priceInWei;
     }
     
