@@ -23,7 +23,7 @@ contract ItemManager is Ownable {
    
     uint itemIndex;
 
-    event SupplyChainStep(uint _itemIndex,uint _step, address _itemAddress,string src);
+    event SupplyChainStep(uint _itemIndex,uint _step, address _itemAddress,string srcdest);
     
     function createItem(string memory _identifier, uint _itemPrice) public onlyOwner {
         Item item = new Item(this,_itemPrice,itemIndex);

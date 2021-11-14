@@ -23,5 +23,30 @@ contract.methods.setUint(56).send({from:"0x3EE395b7F0D0d8d48B69003d15ADC1484F0D9
 
 contract.methods.createItem("mobEx",100).send({from:"0x866Ce66CD52a44fF29589b3372a9F1b42E12F872"}).then(console.log)
 
-
+dadfadda        fff
 web3.eth.getAccounts().then(console.log);   
+
+
+Genesis File
+============================
+
+{
+ "config": {
+    "chainId": 15,
+    "homesteadBlock": 0,
+    "eip150Block": 0,
+    "eip155Block": 0,
+    "eip158Block": 0,
+    "byzantiumBlock": 0,
+    "constantinopleBlock": 0,
+    "petersburgBlock": 0,
+    "ethash": {}
+ },
+ "difficulty": "0x20000",
+ "gasLimit": "0x8000000",
+ "alloc": {}
+}
+
+geth init ./genesis.json --datadir mychaindata
+
+geth --datadir ./mychaindata --nodiscover
