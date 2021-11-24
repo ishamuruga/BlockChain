@@ -25,6 +25,12 @@
 						"internalType": "address",
 						"name": "_itemAddress",
 						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "srcdest",
+						"type": "string"
 					}
 				],
 				"name": "SupplyChainStep",
@@ -171,11 +177,11 @@
 			]
 		},
 		"contracts/ItemManager.sol": {
-			"keccak256": "0x79b51ce90dbbbc8e8c8e13931daea5ae0fcdd7e968fa0bcf3d982560d3fef0b6",
+			"keccak256": "0x9a908cdf522a7f4198cca4d936a78960b9d1bb89b65bf5ac1a784ac76edf71e4",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://9ac32daaf5e498185ca10836ddbeb75e489f5b1124a420df3bc6fba45972dbde",
-				"dweb:/ipfs/QmSRdipBtfkg4y54vT5VbFh2SUZS4X4e9ehZhZ8JDnYdRT"
+				"bzz-raw://3bfa713e0a9e11890e591ca4273d2e2eb3b7e1fffba241555022092081b72f1b",
+				"dweb:/ipfs/QmUpkqvUtHhALJahMyKUyUsLSBZd1pnM8op1zux5hajY38"
 			]
 		},
 		"contracts/Ownable.sol": {
