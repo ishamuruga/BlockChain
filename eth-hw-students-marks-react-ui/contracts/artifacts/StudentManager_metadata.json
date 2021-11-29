@@ -1,0 +1,239 @@
+{
+	"compiler": {
+		"version": "0.8.6+commit.11564f7e"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "_itemIndex",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "_grade",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "_stuAddress",
+						"type": "address"
+					}
+				],
+				"name": "StudentChainStep",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "_owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "stuIndex",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "subject",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "score",
+						"type": "uint256"
+					}
+				],
+				"name": "addMarks",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "stuIndex",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "email",
+						"type": "string"
+					}
+				],
+				"name": "createStudent",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "idx",
+						"type": "uint256"
+					}
+				],
+				"name": "getMarks",
+				"outputs": [
+					{
+						"internalType": "contract Mark[]",
+						"name": "",
+						"type": "address[]"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "idx",
+						"type": "uint256"
+					}
+				],
+				"name": "getStudent",
+				"outputs": [
+					{
+						"internalType": "contract Student",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "isOwner",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "students",
+				"outputs": [
+					{
+						"internalType": "contract Student",
+						"name": "_student",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "_dept",
+						"type": "string"
+					},
+					{
+						"internalType": "enum StudentManager.GradeState",
+						"name": "_gState",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/StudentsManager.sol": "StudentManager"
+		},
+		"evmVersion": "berlin",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Mark.sol": {
+			"keccak256": "0xc5934f7400c29b4bc4d37bc91c29aaa71b797f772797db1cf6cc4153a1fcb994",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3e79ec4e7350846f8d64478efcf77102cea71c4adf36513d42ac824a066af8cb",
+				"dweb:/ipfs/QmY1sdRwwTU2gvTovT8v51EDUkw8cPpp5tDynrdXeM5rZB"
+			]
+		},
+		"contracts/Ownable.sol": {
+			"keccak256": "0xc116c50750f39e696d8989590c1124e598a24e451831ad3ac9fc0bd1ee4f4591",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://cdd4ca46052b7afd66ef181b718142e2b2fb52cdca2542b01c26da4af197fd82",
+				"dweb:/ipfs/QmVWooFz9crXvY6a4Ae9TyDk5MyAxpHSijPTDWZ4qcwYrH"
+			]
+		},
+		"contracts/Student.sol": {
+			"keccak256": "0x8873c96e518d00cdf75e1399aa39c63bcb58f1e6afb3e8fa078c95b51205600f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://cdb54d2b8f8eb5b715f72927ca799e3075bae2b9824e646328bc4ab30454eac4",
+				"dweb:/ipfs/QmfRg57a3huWt5yYd6CXbgpDCXwQ8WUSj9ThhEtDariD3s"
+			]
+		},
+		"contracts/StudentsManager.sol": {
+			"keccak256": "0x829e8b0774f974bff4bf8096bec9669152e42027a73ceed8c26b29ab8e4abc6b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://32e43bd58ba566f83802647997177d8e5cbdd00ac44c071e0e1b6d043f2e0b3b",
+				"dweb:/ipfs/QmQsZwvC9KgxrjxRsbJiyZE1LnXx43LZoGuiRqjUo1xwnK"
+			]
+		}
+	},
+	"version": 1
+}
