@@ -20,12 +20,13 @@ export default function App() {
     const [studentManager, setStudentManager] = React.useState();
     const [student, setStudent] = React.useState();
     const [mark, setMark] = React.useState();
-    const [stus,setStus] = React.useState({
-        s:[]
+    const [stus, setStus] = React.useState({
+        s: []
     });
-    const [mrks,setMrks] = React.useState({
-        m:[]
+    const [mrks, setMrks] = React.useState({
+        m: []
     });
+    const [ft, setFt] = React.useState(true);
 
 
     const [myStuItem, setMyStuItem] = React.useState({
@@ -92,7 +93,7 @@ export default function App() {
     }, [networkId]);
 
     const handleAddStudent = async (val) => {
-        
+
         console.log(val.id);
         console.log(val.name);
         console.log(val.email);
@@ -102,7 +103,7 @@ export default function App() {
         let email = val.email;
 
 
-        let result = await studentManager.methods.createStudent(id,id,name,email).send({ from: accounts[0] });
+        let result = await studentManager.methods.createStudent(id, id, name, email).send({ from: accounts[0] });
 
         console.log(result);
 
@@ -110,48 +111,78 @@ export default function App() {
         sts.push(val);
 
         setStus({
-            s:sts
+            s: sts
         });
-        
+
         console.log("*********************************************");
         console.log(stus);
+
+        //if (ft) {
+        //    console.log("++++++++++++++++++++++++++++++++Event Started");
+            listenToEvent();
+        //    setFt(false);
+        //}
+
     }
 
-    const handleAddMarks = async (val) =>{
+    const handleAddMarks = async (val) => {
         console.log(val);
 
         let id = val.id;
         let sub = val.sub;
         let mrk = val.mrk;
 
-        let result = await studentManager.methods.addMarks(id,sub,mrk).send({ from: accounts[0] });
+        let result = await studentManager.methods.addMarks(id, sub, mrk).send({ from: accounts[0] });
 
         console.log(result);
         let m1 = mrks.m;
         m1.push(val);
 
         setMrks({
-            m:m1
+            m: m1
         })
     }
 
-    const handleGetMarks = async ()=>{
-        let result = await studentManager.methods.getMarks(101).send({ from: accounts[0] });
-        console.log("==========================================");
-        console.log(result);
+    const handleGetMarks = async () => {
+        console.log("===================================Get Marks")
+
+        //let result = await studentManager.methods.getMarks(101).call();
+        //let result = await studentManager.methods.getMarks(101).send({ from: accounts[0] });
+
+        //function getMark(uint idx,uint midx) public returns (string memory,uint){
+
+        let result = await studentManager.methods.getMark(101,0).call();
+
+        console.log(JSON.stringify(result));
+
+    }
+
+    const listenToEvent = (event) => {
+        console.log("0.#Event=====")
+        studentManager.events.MarksEvent().on("data", async function (evt) {
+            console.log("1.#Event=====")
+            console.log(evt);
+
+
+        });
+
+        studentManager.events.logger().on("data", async function (evt) {
+            console.log("2.#Event=====")
+            console.log(evt);
+        });
     }
 
 
     return (
         <div>
             <Student onAddStudent={handleAddStudent}></Student>
-            <br/>
+            <br />
             <StudentList data={stus.s}></StudentList>
             <br></br>
             <Marks onAddMarks={handleAddMarks}></Marks>
             <br></br>
             <MarksList data={mrks.m}></MarksList>
-            
+
             <button onClick={handleGetMarks}>Get Marks</button>
         </div>
     );

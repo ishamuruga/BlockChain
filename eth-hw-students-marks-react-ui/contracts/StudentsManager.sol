@@ -20,6 +20,8 @@ contract StudentManager is Ownable {
     }
 
     event StudentChainStep(uint _itemIndex,uint _grade, address _stuAddress);
+    event MarksEvent(Mark mrk);
+    event logger(string data);
 
     mapping(uint => stu_marks) public students;
 
@@ -47,7 +49,26 @@ contract StudentManager is Ownable {
     }
 
     function getMarks(uint idx) public returns(Mark[] memory){
-        return students[idx]._marks;
+        emit logger("===1");
+        //Mark[] memory mrks = new Mark[](students[idx]._marks.length);
+        emit logger("===2");
+
+
+        for (uint i = 0; i < students[idx]._marks.length; i++) {
+            emit logger("===========");
+        //    Mark mrk  = students[idx]._marks[i];
+        //    mrks[i] = mrk;
+            emit MarksEvent(students[idx]._marks[i]);
+        }
+        
+        return  students[idx]._marks;
+    }
+
+    function getMark(uint idx,uint midx) public returns (string memory,uint){
+        Mark m = students[idx]._marks[midx];
+        //string memory sub = m.subject();
+        //return ("test",123);
+        return (m.subject(),m.marks());
     }
 
 
