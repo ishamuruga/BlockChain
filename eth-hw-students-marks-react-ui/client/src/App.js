@@ -11,6 +11,7 @@ import StudentList from './components/StudentList';
 import Marks from './components/Marks';
 import MarksList from './components/MarksList';
 
+import Swal from 'sweetalert2';
 
 export default function App() {
 
@@ -117,11 +118,11 @@ export default function App() {
         console.log("*********************************************");
         console.log(stus);
 
-        //if (ft) {
-        //    console.log("++++++++++++++++++++++++++++++++Event Started");
+        if (ft) {
+            console.log("++++++++++++++++++++++++++++++++Event Started");
             listenToEvent();
-        //    setFt(false);
-        //}
+            setFt(false);
+        }
 
     }
 
@@ -145,15 +146,27 @@ export default function App() {
 
     const handleGetMarks = async () => {
         console.log("===================================Get Marks")
+        console.log(stus);
+        let stuId = stus.s[0].id;
+        let mrs = mrks.m;
 
-        //let result = await studentManager.methods.getMarks(101).call();
-        //let result = await studentManager.methods.getMarks(101).send({ from: accounts[0] });
+        
 
-        //function getMark(uint idx,uint midx) public returns (string memory,uint){
+        var results = await Promise.all(mrs.map(async (x, idx) => {
+            console.log("^^^^^^^^");
+            console.log(stuId);
+            console.log(x.id);
+            console.log(idx);
+            let result = await studentManager.methods.getMark(stuId, idx).call();
+            console.log("====Get Marks of ===" + x.id);
+            
+            return result;
+        }));
 
-        let result = await studentManager.methods.getMark(101,0).call();
-
-        console.log(JSON.stringify(result));
+        Swal.fire(
+            'Data back from Eth',
+            JSON.stringify(results),''
+        );
 
     }
 
@@ -172,6 +185,8 @@ export default function App() {
         });
     }
 
+    
+
 
     return (
         <div>
@@ -184,6 +199,7 @@ export default function App() {
             <MarksList data={mrks.m}></MarksList>
 
             <button onClick={handleGetMarks}>Get Marks</button>
+
         </div>
     );
 }
