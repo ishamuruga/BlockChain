@@ -1,3 +1,50 @@
+## Scope of POC
+The project tries to explain the a Student's marks track record in Etherium Block Chain implementation. The solution exibits the power of developing Smart Contracts using Solidity Language, and JS integration with web3js library.
+
+## Development Tools
+
+1) Visual Studio Code - Latest
+2) NodeJS - 14.X or Latest
+3) Solidity Compiler ($> npm install --global solc)
+4) Truffle npm Package
+   ##### $> npm install truffle --global 
+5) Ganache - select the one that matches your operating system
+
+## Setup the Dev Environment
+
+1) Setup the project environment, by running the following command
+    - truffle unbox react
+2) You will be getting following project structure
+![Ganache Server](./doc/truffle-box.png)
+3) Start the Ganache Server, which will similulate a etherium blockchain network
+![Ganache Server](./doc/ganache-window.png)
+4) Project Configuration to connect to Ganache Server
+    * open the file _truffle-config.js_ , delete the file contents & replace with following contents(this will configure our truffle project to connect to Ganache and sets the Solidity compiler version to ^0.8.7)
+```JS
+const path = require("path");
+module.exports = {
+  contracts_build_directory: path.join(__dirname, "client/src/contracts"),
+  networks: {
+    development: {
+      host: "127.0.0.1",
+      port: 7545,
+      network_id: "*" // Match any network id
+    }
+  },
+  compilers: {
+    solc: {
+      version: "^0.8.7"
+    }
+  }
+};
+```
+
+## Step 1 - Develop Smart Contract
+
+Before trying to understand following solidoty code, try to grab some basics syntax of the same.
+
+The basic structure of my Smart Contract _StudentManager.sol_ will look like 
+```java
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.6;
 
@@ -5,6 +52,14 @@ import "./Student.sol";
 import "./Mark.sol";
 import "./Ownable.sol";
   
+contract StudentManager is Ownable {
+    //Methods and Standard Functions.
+}
+```
+
+Lets update the code with standard logic
+
+```java
 contract StudentManager is Ownable {
 
     enum GradeState {   
@@ -67,3 +122,4 @@ contract StudentManager is Ownable {
     }
 
 }
+```
