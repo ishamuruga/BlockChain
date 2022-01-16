@@ -35,6 +35,10 @@ public class StudentConfig {
 		return Web3j.build(new HttpService(web3ClientAddress, new OkHttpClient.Builder().build()));
 	}
 	
+	public StaticGasProvider gas() {
+        return new StaticGasProvider(gasPrice, gasLimit);
+    }
+	
 	
 	public String getOwnerContractAddress() {
 		return ownerContractAddress;
@@ -59,10 +63,6 @@ public class StudentConfig {
 	public void setWeb3ClientAddress(String web3ClientAddress) {
 		this.web3ClientAddress = web3ClientAddress;
 	}
-
-	public StaticGasProvider gas() {
-        return new StaticGasProvider(gasPrice, gasLimit);
-    }
 
 	public BigInteger getGasPrice() {
 		return gasPrice;

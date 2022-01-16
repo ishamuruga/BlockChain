@@ -1,6 +1,7 @@
 package com.example.eth_spring_boot_students_marks;
 
 import java.io.IOException;
+import java.math.BigInteger;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -30,6 +31,7 @@ public class MyCommandLineRunner implements CommandLineRunner  {
 			e.printStackTrace();
 		}
         
-
+        bcService.createStudent(new BigInteger("4"), new BigInteger("40"), "Ramarajan40", "ramarajan40@gmail.com");
+        bcService.getStudent(4);
     }
 }

@@ -17,17 +17,20 @@ contract StudentManager is Ownable {
         Mark[] _marks;
         string  _dept;
         GradeState _gState;
+        string tag;
     }
 
     event StudentChainStep(uint _itemIndex,uint _grade, address _stuAddress);
     event MarksEvent(Mark mrk);
     event logger(string data);
+    event evntStudent(uint _idx, Student stu);
 
     mapping(uint => stu_marks) public students;
 
     function createStudent(uint stuIndex,uint id,string memory name,string memory email) public {
         Student stu = new Student(id,name,email);
         students[stuIndex]._student = stu;
+        students[stuIndex].tag = name;
         emit StudentChainStep(stuIndex,0, msg.sender);
     }
 
@@ -44,9 +47,23 @@ contract StudentManager is Ownable {
         emit StudentChainStep(stuIndex,uint(students[stuIndex]._gState), msg.sender);
     }
 
-    function getStudent(uint idx) public returns(Student){
-        return students[idx]._student;
+    function getStudent(uint idx) public returns(address Student){
+        //Student stu = new Student(9,'superstar9','ss9@gmail.com');
+        //return address(students[idx]._student);
+        //new Student(9,"superstar9","ss9@gmail.com");
+        emit evntStudent(idx, students[idx]._student);
+        return address(students[idx]._student);
     }
+
+    function getStudentTag(uint idx) public returns(string memory) {
+        //Student stu = new Student(9,'superstar9','ss9@gmail.com');
+        //return address(students[idx]._student);
+        //new Student(9,"superstar9","ss9@gmail.com");
+        return students[idx].tag;
+    }
+
+
+
 
     function getMarks(uint idx) public returns(Mark[] memory){
         emit logger("===1");
